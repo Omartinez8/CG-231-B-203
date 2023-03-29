@@ -10,6 +10,8 @@
 	<body>
 		<script type="module">
 			import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+			//MOUSE CONTROL
+            import { OrbitControls } from 'https://unpkg.com/three@0.126.1/examples/jsm/controls/OrbitControls.js'; 
 			//Creates scene and camera
 
             //Omar Santiago Martínez Pachón (600633)---------------------------------
@@ -60,7 +62,7 @@
 
             scene.add(pointLight)
         
-        
+            var controls = new OrbitControls(camera, renderer.domElement); //Controles 
             
 
 			//Sets camera's distance away from cube (using this explanation only for simplicity's sake - in reality this actually sets the 'depth' of the camera's position)
